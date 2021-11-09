@@ -12,6 +12,7 @@ sheet= wb.active
 sheet.append(['제목','채널명','조회수','좋아야수'])
 
 raw = requests.get('https://tv.naver.com/r')
+
 html = BeautifulSoup(raw.text,'html.parser')
 
 container = html.select('div.inner')
